@@ -1,8 +1,9 @@
 import express from "express";
-import { saveArticle, getArticles } from "../controllers/library.js";
+import { deleteArticle, getArticles, saveArticle } from "../controllers/library.js";
 
 const router = express.Router();
 
 router.post("/save-article", saveArticle);
+router.delete("/delete-article", deleteArticle);
 router.get("/get-articles/:userId", getArticles);
 export default router;
